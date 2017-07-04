@@ -8,7 +8,8 @@ class Employee
     enum class CompensationType{HOURLY, MONTHLY};
 
     public:
-        Employee();
+        Employee(QString _name, QString _SSN, CompensationType _compensation_type)
+            : name_(_name), SSN_(_SSN), compensation_type_(_compensation_type) {}
 
         float calc_salary() = 0;
 
