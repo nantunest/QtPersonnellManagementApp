@@ -7,7 +7,7 @@ class MonthlyPaidEmployee : public Employee
 {
     public:
         MonthlyPaidEmployee(QString _name, QString _SSN, float _monthly_compensation)
-            : Employee(_name, _SSN, CompensationType::MONTHLY), monthly_compensation_(_monthly_compensation) {}
+            : Employee(_name, _SSN), monthly_compensation_(_monthly_compensation) {}
 
         float calc_salary() {
             return monthly_compensation_;
