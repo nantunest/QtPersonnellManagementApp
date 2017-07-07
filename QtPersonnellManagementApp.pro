@@ -2,7 +2,8 @@ QT += qml quick
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    personnellmanager.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,4 +33,5 @@ HEADERS += \
     employee.h \
     hourlypaidemployee.h \
     monthlypaidemployee.h \
-    salesman.h
+    salesman.h \
+    personnellmanager.h
