@@ -2,20 +2,26 @@
 #define PERSONNELLMANAGER_H
 
 #include <employee.h>
+#include <monthlypaidemployee.h>
+#include <hourlypaidemployee.h>
 #include <QVector>
+#include <QMap>
 
 class PersonnellManager
 {
-public:
-    PersonnellManager();
+    public:
+        PersonnellManager();
 
-private:
-    QVector<Employee> employees_;
+        void add_employee(Employee new_employee);
+        void remove_employee(Employee r_employee);
+        QVector<Employee> get_employees();
 
-    void add_employee(Employee new_employee);
-    void remove_employee(Employee r_employee);
+    public slots:
+       void create_new_employee(QMap attributes);
 
-    QVector<Employee> get_employees();
+    private:
+        QVector<Employee> employees_;
+
 
 };
 
