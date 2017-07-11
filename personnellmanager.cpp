@@ -10,11 +10,6 @@ void PersonnellManager::remove_employee(Employee* r_employee)
     employees_.removeOne(r_employee);
 }
 
-Employee *PersonnellManager::find_employee(QString ssn)
-{
-    for(auto &eIt : employees_)
-        if (eIt->)
-}
 
 void PersonnellManager::create_new_employee(QMap<QString, QString> attributes)
 {
