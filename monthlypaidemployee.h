@@ -8,6 +8,8 @@ class MonthlyPaidEmployee : public Employee
 {
     Q_OBJECT
 
+        Q_PROPERTY(float monthlyCompensation READ monthlyCompensation WRITE setMonthlyCompensation NOTIFY monthlyCompensationChanged)
+
     public:
         MonthlyPaidEmployee(QString _name, QString _SSN, float _monthly_compensation)
             : Employee(_name, _SSN), monthly_compensation_(_monthly_compensation) {}

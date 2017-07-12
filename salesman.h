@@ -7,6 +7,10 @@
 class Salesman : public MonthlyPaidEmployee
 {
     Q_OBJECT
+        
+        Q_PROPERTY(float realizedOutcome READ realizedOutcome WRITE setrealizedOutcome NOTIFY realizedOutcomeChanged)
+        Q_PROPERTY(float outcomeClaim READ outcomeClaim WRITE setOutcomeClaim NOTIFY outcomeClaimChanged)
+        Q_PROPERTY(float bonus READ bonus WRITE setBonus NOTIFY bonusChanged)
 
 public:
     Salesman(QString _name, QString _SSN, float _monthly_compensation, float _bonus, bool _outcome_claim)

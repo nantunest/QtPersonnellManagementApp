@@ -8,6 +8,9 @@ class Employee
 {
     Q_OBJECT
 
+        Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+        Q_PROPERTY(QString SSN READ SSN WRITE setSSN NOTIFY SSNChanged)
+
     public:
         Employee(QString _name, QString _SSN)
             : name_(_name), SSN_(_SSN) {}

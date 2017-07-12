@@ -1,5 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+
+#include <employee.h>
+#include <hourlypaidemployee.h>
+#include <monthlypaidemployee.h>
 
 int main(int argc, char *argv[])
 {
