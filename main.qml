@@ -2,11 +2,19 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 
+import People 1.0
+
 ApplicationWindow {
     visible: true
     width: 480
     height: 800
     title: qsTr("Hello World")
+
+    HourlyPaidEmployee{
+        id:hpe
+        done_hours: 10
+        hourly_compensation: 10
+    }
 
     SwipeView {
         id: swipeView
@@ -18,7 +26,7 @@ ApplicationWindow {
 
         Page {
             Label {
-                text: qsTr("Second page")
+                text: qsTr("Hourly paid: "+hpe.calc_salary())
                 anchors.centerIn: parent
             }
         }
